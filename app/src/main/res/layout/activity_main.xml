@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CategoryCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_search_view"
+                android:gravity="center"
+                android:text="Search all..."
+                android:textColor="#FFFFFF" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView style="@style/CategoryCard">
+
+            <TextView
+                style="@style/MainActivityHeader"
+                android:text="Top Picks" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_picks_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <androidx.cardview.widget.CardView style="@style/CategoryCard">
+
+            <TextView
+                style="@style/MainActivityHeader"
+                android:text="Categories" />
+        </androidx.cardview.widget.CardView>
+
+        <ListView
+            android:id="@+id/category_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+</ScrollView>

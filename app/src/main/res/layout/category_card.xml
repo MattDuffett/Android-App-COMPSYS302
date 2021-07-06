@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CategoryCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView style="@style/CategoryImageCard">
+            <ImageView
+                android:id="@+id/category_imageview"
+                style="@style/CategoryImage" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/category_textview"
+            style="@style/CategoryText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
